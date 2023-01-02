@@ -41,4 +41,10 @@
 #include "platforms/avr/fastled_avr.h"
 #endif
 
+// C++17 removed the register keyword, so we define it to nothing so that
+// it doesn't cause errors.
+#if __cplusplus >= 201703L
+#define register
+#endif
+
 #endif
